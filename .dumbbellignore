@@ -1,0 +1,20 @@
+# Build and cache artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# Generated reports
+reports/
+
+# Deliberately vulnerable fixtures
+samples/
+
+# Tests embed fake credentials and dangerous calls on purpose
+tests/
+
+# The rule catalogue contains the patterns and descriptions it searches for
+dumbbell/rules.py

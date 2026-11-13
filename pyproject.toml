@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dumbbell"
+version = "1.1.0"
+description = "Static security audit with a terminal-style GUI and a rule-based CLI."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "DUMBBELL contributors" }]
+keywords = ["security", "sast", "static-analysis", "scanner", "sql-injection", "secrets"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Environment :: X11 Applications",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Security",
+    "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = []
+
+[project.scripts]
+dumbbell = "dumbbell.cli:main"
+
+[project.gui-scripts]
+dumbbell-gui = "dumbbell.gui:main"
+
+[tool.setuptools]
+packages = ["dumbbell"]
+
+[tool.setuptools.package-data]
+dumbbell = ["assets/*.png", "assets/*.ico"]

@@ -1,0 +1,6 @@
+# Deliberately vulnerable fixtures and tests with fake credentials
+samples/
+tests/
+
+# The rule catalogue contains the patterns it searches for
+rules.py
